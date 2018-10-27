@@ -34,9 +34,9 @@ Shipped Android Version | Android 7.0 (Nougat)
  
  
 ## Credits
-Thanks to @DhirajSurvase for all the initial work and bringing up Nougat for panelli.
+Thanks to [@DhirajSurvase](https://github.com/DhirajSurvase) for all the initial work and bringing up Nougat for panelli.
 
-Thanks to @SamarV-121 for helping to bring up panelli with shims.
+Thanks to [@SamarV-121](https://github.com/SamarV-121) for helping to bring up panelli with shims.
 
 ## Trees Reference/Credits
 - https://github.com/Moyster/o_vendor_mediatek
@@ -45,6 +45,6 @@ Thanks to @SamarV-121 for helping to bring up panelli with shims.
 - https://github.com/GearLabs/android_device_mediatek_mt6737-common
 - https://github.com/MotorolaMobilityLLC/device-mediatek
 
-## Patches Credits
-@DeckerSU for FM Radio & WiFI Tethering patches.
+## Patches Credit
+[@DeckerSU](https://github.com/DeckerSU) for FM Radio & WiFI Tethering patches.
 
