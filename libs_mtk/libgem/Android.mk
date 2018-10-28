@@ -9,6 +9,8 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
 	lib/FpsCounter.cpp \
 	lib/GraphicBufferUtil.cpp \
+	lib/IDumpTunnel.cpp \
+	lib/RefBaseDump.cpp \
 	lib/SWWatchDog.cpp
 
 LOCAL_C_INCLUDES := \
@@ -31,12 +33,6 @@ LOCAL_SHARED_LIBRARIES := \
 	libgralloc_extra \
 	libpng \
 	libui
-
-ifeq (, $(findstring MTK_AOSP_ENHANCEMENT, $(MTK_GLOBAL_CFLAGS)))
-	LOCAL_SRC_FILES += \
-		lib/IDumpTunnel.cpp \
-		lib/RefBaseDump.cpp
-endif
 
 LOCAL_MODULE := libui_ext
 LOCAL_MODULE_TAGS := optional
