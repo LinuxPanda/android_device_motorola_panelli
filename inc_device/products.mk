@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgralloc_extra \
     libgui_ext \
+    libion_mtk \
     libui_ext
 
 # Power
