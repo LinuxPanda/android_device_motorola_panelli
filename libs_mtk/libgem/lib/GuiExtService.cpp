@@ -10,17 +10,13 @@
 #include <utils/SortedVector.h>
 #include <binder/PermissionCache.h>
 
-//#include <android/native_window.h>
+#include <android/native_window.h>
 #include <gui/ISurfaceComposer.h>
 #include <gui/SurfaceComposerClient.h>
 
 #include <ui/DisplayInfo.h>
 
-#ifdef MTK_AOSP_ENHANCEMENT
-#include <ui/mediatek/IDumpTunnel.h>
-#else
 #include <mediatek/IDumpTunnel.h>
-#endif
 
 #include <cutils/memory.h>
 

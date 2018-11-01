@@ -5,8 +5,6 @@
 #include <sys/cdefs.h>
 #include <sys/types.h>
 
-#include <system/window.h>
-
 #include <hardware/gralloc.h>
 
 __BEGIN_DECLS

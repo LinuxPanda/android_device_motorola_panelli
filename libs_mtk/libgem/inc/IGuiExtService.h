@@ -6,7 +6,7 @@
 #include <binder/Parcel.h>
 #include <binder/BinderService.h>
 
-#include <ui/GraphicBuffer.h>
+#include <gui/IGraphicBufferAlloc.h>
 
 namespace android
 {

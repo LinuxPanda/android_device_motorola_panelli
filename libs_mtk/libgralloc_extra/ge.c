@@ -58,7 +58,8 @@ static int _ge_alloc_sec_hwc(int ion_client, size_t size, int usage, ion_user_ha
 		ion_flags = ION_FLAG_CACHED | ION_FLAG_CACHED_NEEDS_SYNC;
 	}
 
-	ret = ion_alloc(ion_client, size, 0, heap_mask, ion_flags, &ion_hnd);
+	/* require 4096 aligment */
+	ret = ion_alloc(ion_client, size, 4096, heap_mask, ion_flags, &ion_hnd);
 
 	if ( !ret && pion_hnd) *pion_hnd = ion_hnd;
 	return ret;

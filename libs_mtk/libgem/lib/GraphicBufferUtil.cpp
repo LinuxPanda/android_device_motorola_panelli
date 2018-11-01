@@ -792,7 +792,7 @@ DownSampleConfig GraphicBufferUtil::downSampleCopy(const DownSampleConfig& confi
     srcBuf->unlock();
     dstBuf->unlock();
 
-    return std::move(newConfig);
+    return newConfig;
 }
 
 
