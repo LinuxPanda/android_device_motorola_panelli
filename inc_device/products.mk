@@ -120,6 +120,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libccci_util \
     librilutilsmtk
 
 # Thermal
