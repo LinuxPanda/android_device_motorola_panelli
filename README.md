@@ -30,9 +30,17 @@ Shipped Android Version | Android 7.0 (Nougat)
 
 ## Not Working:
 - [ ] Volte
- 
- 
- 
+
+## Applying/Removing patches
+Run command from root directory of ROM source. To apply AOSP patches, replace lineage with aosp.
+
+Check - `./device/motorola/panelli/patches/lineage/check.sh`
+
+Apply - `./device/motorola/panelli/patches/lineage/apply.sh`
+
+Remove - `./device/motorola/panelli/patches/lineage/remove.sh`
+
+
 ## Credits
 Thanks to [@DhirajSurvase](https://github.com/DhirajSurvase) for all the initial work and bringing up Nougat for panelli.
 
@@ -46,5 +54,7 @@ Thanks to [@SamarV-121](https://github.com/SamarV-121) for helping to bring up p
 - https://github.com/MotorolaMobilityLLC/device-mediatek
 
 ## Patches Credit
-[@DeckerSU](https://github.com/DeckerSU) for FM Radio & WiFI Tethering patches.
+Thanks to [@Moyster](https://github.com/Moyster) for patches scripts & some patches.
+
+Thanks to [@DeckerSU](https://github.com/DeckerSU) for FM Radio & WiFI Tethering patches.
 
