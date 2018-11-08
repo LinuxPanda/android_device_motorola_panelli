@@ -60,12 +60,8 @@ ro.config.media_vol_steps=30
 ### CAMERA
 #
 
-# ?? what does these actually do ??
-ro.mtk_cam_mfb_support=0
-ro.mtk_cam_cfb=1
-
 # Google lens support
-persist.camera.HAL3.enabled=1
+#persist.camera.HAL3.enabled=1
 
 # Media quality
 ro.media.dec.jpeg.memcap=8000000

@@ -9,10 +9,10 @@ dirs="bionic external/apache-http packages/apps/FMRadio packages/apps/Settings s
 for dir in $dirs ; do
 	cd $rootdirectory
 	cd $dir
-	echo -e "\n Cleaning $dir patches...\n"
+	echo "\n Cleaning $dir patches...\n"
 	git checkout -- . && git clean -df
 done
 
 # -----------------------------------
-echo -e "Done !\n"
+echo "Done !\n"
 cd $rootdirectory
