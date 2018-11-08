@@ -13,9 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 LOCAL_PATH := $(call my-dir)
 
 $(warning build BASIC wpa_supplicant)
+
 WPA_SUPPL_DIR = external/wpa_supplicant_8
 WPA_SRC_FILE :=
 
@@ -27,7 +29,10 @@ ifneq ($(BOARD_HOSTAPD_DRIVER),)
     CONFIG_DRIVER_$(BOARD_HOSTAPD_DRIVER) := y
 endif
 
+include $(WPA_SUPPL_DIR)/hostapd/android.config
 include $(WPA_SUPPL_DIR)/wpa_supplicant/android.config
+
+L_CFLAGS += -DCONFIG_HOTSPOT_MGR_SUPPORT
 
 WPA_SUPPL_DIR_INCLUDE = $(WPA_SUPPL_DIR)/src \
 	$(WPA_SUPPL_DIR)/src/common \
