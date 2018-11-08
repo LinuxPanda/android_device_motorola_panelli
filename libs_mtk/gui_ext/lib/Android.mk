@@ -53,9 +53,9 @@ MTK_HWC_CHIP = $(shell echo $(MTK_PLATFORM) | tr A-Z a-z )
 
 LOCAL_C_INCLUDES:= \
     $(TOP)/frameworks/base/include/ \
-    $(DEVICE_PATH)/libs_mtk/graphics/gui_ext/inc \
-    $(DEVICE_PATH)/libs_mtk/graphics/ui_ext/inc \
-    $(DEVICE_PATH)/libs_mtk/graphics/gralloc_extra/include
+    $(DEVICE_PATH)/libs_mtk/gui_ext/inc \
+    $(DEVICE_PATH)/libs_mtk/ui_ext/inc \
+    $(DEVICE_PATH)/libs_mtk/gralloc_extra/include
 
 LOCAL_SHARED_LIBRARIES := \
     libutils \

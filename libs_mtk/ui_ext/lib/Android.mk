@@ -49,8 +49,8 @@ LOCAL_SRC_FILES:= \
 	RefBaseDump.cpp
 
 LOCAL_C_INCLUDES:= \
-	$(DEVICE_PATH)/libs_mtk/graphics/ui_ext/inc \
-	$(DEVICE_PATH)/libs_mtk/graphics/gralloc_extra/include \
+	$(DEVICE_PATH)/libs_mtk/ui_ext/inc \
+	$(DEVICE_PATH)/libs_mtk/gralloc_extra/include \
 	external/libpng \
 	external/zlib \
 	external/skia/src/images \
