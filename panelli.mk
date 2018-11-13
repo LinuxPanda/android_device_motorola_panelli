@@ -36,10 +36,6 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/fstab.mt6735:root/fstab.mt6735 \
-    $(DEVICE_PATH)/rootdir/factory_init.connectivity.rc:root/factory_init.connectivity.rc \
-    $(DEVICE_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
-    $(DEVICE_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-    $(DEVICE_PATH)/rootdir/factory_init.usb.rc:root/factory_init.usb.rc \
     $(DEVICE_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
     $(DEVICE_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
     $(DEVICE_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
@@ -47,14 +43,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
     $(DEVICE_PATH)/rootdir/init.project.rc:root/init.project.rc \
     $(DEVICE_PATH)/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
-    $(DEVICE_PATH)/rootdir/multi_init.rc:root/multi_init.rc \
     $(DEVICE_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc
-
-# Ramdisk, volte related configs disabled, just for reference
-#PRODUCT_COPY_FILES += \
-#    $(DEVICE_PATH)/rootdir/init.mal.rc:root/init.mal.rc \
-#    $(DEVICE_PATH)/rootdir/init.rilproxy.rc:root/init.rilproxy.rc \
-#    $(DEVICE_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
 
 # RIL
 BOARD_PROVIDES_RILD := false
