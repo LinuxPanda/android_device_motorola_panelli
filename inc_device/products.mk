@@ -67,8 +67,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     libcurl \
-    libnl_2 \
-    mnld
+    libnl_2 
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

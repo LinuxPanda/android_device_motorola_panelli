@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# GPS
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf
+
 # Telephony Emergency List
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/telephony/cdma_ecc_list.xml:system/etc/cdma_ecc_list.xml \
