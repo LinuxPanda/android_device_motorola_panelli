@@ -103,24 +103,11 @@ PRODUCT_PACKAGES += \
 ### MTK
 #
 
-# Gatekeeper, Software
-PRODUCT_PACKAGES += \
-    libSoftGatekeeper
-
 # Memory Heap
 PRODUCT_PACKAGES += \
     libgralloc_extra \
     libgui_ext \
     libui_ext
-
-# Power
-PRODUCT_PACKAGES += \
-    power.mt6737m
-
-# RIL
-PRODUCT_PACKAGES += \
-    libccci_util \
-    librilutilsmtk
 
 # Thermal
 PRODUCT_PACKAGES += \
