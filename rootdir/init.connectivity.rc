@@ -4,16 +4,26 @@ on post-fs-data
     chmod 0660 /dev/ttyMT2
     chown system system /dev/ttyMT2
 
+#/dev/ttyMT1 for GPS 3337 usage
+    chmod 0660 /dev/ttyMT1
+    chown system system /dev/ttyMT1
+
 # GPS
     mkdir /data/gps_mnl 0771 gps system
     mkdir /data/misc/gps 0770 gps system
+    mkdir /data/mnl_flp 0771 gps system
+    mkdir /data/mnl_gfc 0771 gps system
     chown gps system /data/mpe_mnl
-    chmod 0775 /vendor/xbin/MPED
+    chown gps system /data/mnl_flp
+    chown gps system /data/mnl_gfc
     chown gps gps /sys/class/gpsdrv/gps/pwrctl
     chown gps gps /sys/class/gpsdrv/gps/suspend
     chown gps gps /sys/class/gpsdrv/gps/state
     chown gps gps /sys/class/gpsdrv/gps/pwrsave
     chown gps gps /sys/class/gpsdrv/gps/status
+
+# GPS EMI
+    chmod 666 /dev/gps_emi
 
 # WiFi
     mkdir /data/misc/wifi 0770 wifi wifi

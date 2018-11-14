@@ -22,9 +22,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/gps/agps_profiles_conf2.xml:system/vendor/etc/agps_profiles_conf2.xml
 
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/gps/slp_conf:system/vendor/etc/slp_conf
-
 # Misc
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/misc,system/vendor/etc)

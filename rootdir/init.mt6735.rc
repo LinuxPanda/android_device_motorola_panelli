@@ -133,6 +133,9 @@ on post-fs-data
     # GPS
     mkdir /data/gps_mnl 0771 gps system
     mkdir /data/misc/gps 0770 gps system
+    mkdir /data/mpe_mnl 0771 gps system
+    chown gps system /data/mpe_mnl
+    chmod 0666 /dev/gps_emi
 
     # NFC
     mkdir /data/nfc_socket 0771 nfc radio
