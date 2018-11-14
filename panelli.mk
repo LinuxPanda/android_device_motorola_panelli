@@ -37,12 +37,10 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/fstab.mt6735:root/fstab.mt6735 \
     $(DEVICE_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
-    $(DEVICE_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
     $(DEVICE_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
     $(DEVICE_PATH)/rootdir/init.mt6735.rc:root/init.mt6735.rc \
     $(DEVICE_PATH)/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
     $(DEVICE_PATH)/rootdir/init.project.rc:root/init.project.rc \
-    $(DEVICE_PATH)/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
     $(DEVICE_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc
 
 # RIL
@@ -63,12 +61,4 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Include other device specific configs
-include $(DEVICE_PATH)/inc_device/board.mk
-include $(DEVICE_PATH)/inc_device/connectivity.mk
-include $(DEVICE_PATH)/inc_device/input.mk
-include $(DEVICE_PATH)/inc_device/media.mk
-include $(DEVICE_PATH)/inc_device/permissions.mk
-include $(DEVICE_PATH)/inc_device/products.mk
-include $(DEVICE_PATH)/inc_device/properties.mk
-include $(DEVICE_PATH)/inc_device/symbols.mk
-include $(DEVICE_PATH)/inc_device/vendor.mk
+include $(DEVICE_PATH)/inc_device/*.mk
