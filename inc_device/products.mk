@@ -109,6 +109,10 @@ PRODUCT_PACKAGES += \
     libgui_ext \
     libui_ext
 
+# Power
+PRODUCT_PACKAGES += \
+    power.mt6737m
+
 # Thermal
 PRODUCT_PACKAGES += \
     thermal.mt6737m
