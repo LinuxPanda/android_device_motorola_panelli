@@ -103,6 +103,11 @@ PRODUCT_PACKAGES += \
 ### MTK
 #
 
+# GPS
+PRODUCT_PACKAGES += \
+    libepos \
+    gps.mt6737m
+
 # Memory Heap
 PRODUCT_PACKAGES += \
     libgralloc_extra \
