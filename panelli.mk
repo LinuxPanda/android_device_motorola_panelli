@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/init.mt6735.rc:root/init.mt6735.rc \
     $(DEVICE_PATH)/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
     $(DEVICE_PATH)/rootdir/init.project.rc:root/init.project.rc \
+    $(DEVICE_PATH)/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
     $(DEVICE_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc
 
 # RIL

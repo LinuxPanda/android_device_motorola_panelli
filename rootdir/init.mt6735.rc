@@ -311,6 +311,14 @@ on post-fs-data
     chown system system /sys/class/misc/m_baro_misc/barobatch
     chown system system /sys/class/misc/m_baro_misc/baroflush
 
+    # Hardwareinfo
+    chmod 0666 /dev/hardwareinfo
+    chown system system /dev/hardwareinfo
+    
+     # tp_emulate_ps
+    chmod 0666 /dev/tp_emulate_ps
+    chown system system /dev/tp_emulate_ps
+
     # Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
@@ -788,6 +796,44 @@ service sysenv_daemon /vendor/bin/sysenv_daemon
     user system
     group system
     oneshot
+service atci_service /vendor/bin/atci_service
+    class core
+    socket atci-service stream 660 radio system
+    socket atci-serv-fw stream 660 radio system
+    user root
+    disabled
+    group radio system
+
+service atcid-daemon-u /vendor/bin/atcid
+    class main
+    socket adb_atci_socket stream 660 radio system
+    user system
+    group radio system media
+    disabled
+    oneshot
+
+service atcid-daemon-e /vendor/bin/atcid
+    class core
+    socket adb_atci_socket stream 660 radio system
+    user root
+    group radio system
+    disabled
+    oneshot
+
+on property:ro.build.type=eng
+start atci_service
+start atcid-daemon-e
+
+on property:persist.service.atci.autostart=1
+start atci_service
+start atcid-daemon-u
+
+service audio-daemon /vendor/bin/audiocmdservice_atci
+    class main
+    socket atci-audio stream 660 root system
+    user root
+    disabled
+    oneshot
 
 service pq /vendor/bin/pq
     class main
@@ -1010,6 +1056,12 @@ service orientationd /vendor/bin/orientationd
     group system input
     class main
 
+service AcdApiDaemon /vendor/bin/AcdApiDaemon
+    disabled
+    user system
+    group system
+    class main
+
 service geomagneticd /vendor/bin/geomagneticd
     disabled
     user system
@@ -1083,6 +1135,12 @@ service sn /vendor/bin/sn
     group system sdcard_rw
     oneshot
 
+#monitor battery status
+service batterywarning /vendor/bin/batterywarning
+    class main
+    user system
+    group system
+
 service MtkCodecService /vendor/bin/MtkCodecService
     class main
     user system
@@ -1102,3 +1160,15 @@ service mediacodec /system/bin/mediacodec
     user mediacodec
     group media system audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm sdcard_r media_rw sdcard_rw
     ioprio rt 4
+
+# Thermal Indicator Service
+
+service ThermalIndicator /vendor/bin/thermalindicator
+	class core
+	disabled
+
+on property:debug.mtk.thermalindicator=0
+	stop ThermalIndicator
+
+on property:debug.mtk.thermalindicator=1
+	start ThermalIndicator
