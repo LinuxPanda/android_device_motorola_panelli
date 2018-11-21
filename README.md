@@ -21,7 +21,7 @@ Shipped Android Version | Android 7.0 (Nougat)
 - [x] Camera
 - [x] Flashlight
 - [x] FM Radio
-- [x] GPS
+- [x] GPS (all modes)
 - [x] Hotspot
 - [x] Offline Charging
 - [x] Ril
@@ -31,7 +31,6 @@ Shipped Android Version | Android 7.0 (Nougat)
 
 ## Not Working:
 - [ ] Volte
-- [ ] GPS - Device only mode
 
 ## Applying/Removing patches
 Run command from root directory of ROM source. To apply AOSP patches, replace lineage with aosp.
