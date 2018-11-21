@@ -16,3 +16,13 @@
 
 #define PATH_WHITELIST_EXTRA_H \
     "/proc/ged",
+
+// Overload this file in your device specific config if you need
+// to add extra whitelisted paths.
+// WARNING: Only use this if necessary. Custom inits should be
+// checked for leaked file descriptors before even considering
+// this.
+// In order to add your files, copy the whole file (don't forget the copyright notice!),
+// uncomment the #define above and change the paths inside to match your requirements
+
+ 

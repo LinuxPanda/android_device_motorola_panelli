@@ -124,4 +124,5 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    lib_driver_cmd_mt66xx
+    lib_driver_cmd_mt66xx \
+    libwifi-hal-mt66xx

@@ -69,8 +69,6 @@ on fs
     #exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata
     write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
-    wait /dev/block/bootdevice/by-name/hw
-    start oem-hw-sh
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
@@ -346,9 +344,9 @@ on post-fs-data
     mkdir /data/misc/akmd 0770 system system
     mkdir /data/misc/s62x 0771 compass compass
     mkdir /data/acdapi/ 0770 system system
-    chmod 0666 /data/misc/acdapi/calib.dat
-    chmod 0666 /data/misc/acdapi/param.dat
-    chmod 0666 /data/misc/acdapi/sensors.dat
+    chmod 0660 /data/misc/acdapi/calib.dat
+    chmod 0660 /data/misc/acdapi/param.dat
+    chmod 0660 /data/misc/acdapi/sensors.dat
     chown system /sys/devices/platform/msensor/driver/cpsopmode
     chown system /sys/devices/platform/msensor/driver/cpsreptxy
     chown system /sys/devices/platform/msensor/driver/cpsreptz
@@ -506,8 +504,6 @@ on post-fs-data
     chmod 0660 /dev/CAM_CAL_DRV1
     chmod 0660 /dev/CAM_CAL_DRV2
     chmod 0660 /dev/CAM_CAL_DRV3
-
-    chown system camera /sys/mipi_switch/mipi_switch
 
     chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp
@@ -700,9 +696,9 @@ on boot
 
     # Define device for ATCID
     chmod 660 /dev/ttyGS0
-    chown system /dev/ttyGS0
+    chown system radio /dev/ttyGS0
     chmod 660 /dev/ttyGS1
-    chown system /dev/ttyGS1
+    chown system radio /dev/ttyGS1
 
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/read_ahead_kb 128
@@ -784,6 +780,8 @@ service ged_srv /vendor/bin/ged_srv
 
 service netdiag /vendor/bin/netdiag
     class main
+    socket netdiag stream 0664 root inet
+
 
 service nvram_daemon /vendor/bin/nvram_daemon
     class main
@@ -796,6 +794,7 @@ service sysenv_daemon /vendor/bin/sysenv_daemon
     user system
     group system
     oneshot
+
 service atci_service /vendor/bin/atci_service
     class core
     socket atci-service stream 660 radio system
@@ -840,21 +839,21 @@ service pq /vendor/bin/pq
     user system
     group system graphics
 
-service dhcpcd_bt-pan /system/bin/dhcpcd -BK
+service dhcpcd_bt-pan /system/bin/dhcpcd -BK -dd
     class main
     user root
     group net_admin net_raw
     disabled
     oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -BK
+service dhcpcd_wlan0 /system/bin/dhcpcd -BK -dd
     class main
     user root
     group net_admin net_raw
     disabled
     oneshot
 
-service dhcpcd_p2p /system/bin/dhcpcd -BK
+service dhcpcd_p2p /system/bin/dhcpcd -BK -dd
     class main
     user root
     group net_admin net_raw
