@@ -4,7 +4,7 @@ echo $1
 rootdirectory="$PWD"
 # ---------------------------------
 
-dirs="bionic external/apache-http packages/apps/FMRadio packages/apps/Settings system/core system/netd"
+dirs="bionic external/apache-http frameworks/av frameworks/base frameworks/native packages/apps/FMRadio packages/apps/Settings system/core system/netd"
 
 for dir in $dirs ; do
 	cd $rootdirectory

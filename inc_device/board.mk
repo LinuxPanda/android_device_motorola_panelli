@@ -15,6 +15,7 @@
 #
 
 # MTK H/W Hooks
+MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
 
 # CM H/W Hooks
@@ -27,6 +28,9 @@ USE_XML_AUDIO_POLICY_CONF := 0
 
 # Audio, disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
+
+# Battery
+MTK_BATTERY_VOLTAGE := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
