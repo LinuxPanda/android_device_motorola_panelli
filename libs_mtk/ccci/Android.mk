@@ -1,0 +1,24 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+ifeq ($(MTK_ECCCI_C2K),yes)
+LOCAL_CFLAGS += -DMTK_ECCCI_C2K
+endif
+
+LOCAL_SRC_FILES := ccci_lib.c
+
+LOCAL_C_INCLUDES := \
+	$(LOCAL_PATH)/include
+
+LOCAL_SHARED_LIBRARIES := libc
+LOCAL_STATIC_LIBRARIES := libcutils liblog
+
+LOCAL_MODULE := libccci_util
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MULTILIB := 32
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_SHARED_LIBRARY)

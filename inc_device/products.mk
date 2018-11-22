@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.mt6737m
 
+# RIL
+PRODUCT_PACKAGES += \
+    libccci_util
+
 # Thermal
 PRODUCT_PACKAGES += \
     thermal.mt6737m
