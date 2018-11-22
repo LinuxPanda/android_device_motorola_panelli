@@ -22,9 +22,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 # Architecture/CPU
 include $(DEVICE_PATH)/inc_board/arch.mk
 
-# Audio
-USE_XML_AUDIO_POLICY_CONF := 0
-
 # Board platform
 TARGET_BOARD_PLATFORM := mt6737m
 
@@ -61,7 +58,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/twrp.fstab
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 
 # SELinux
-#BOARD_SEPOLICY_DIRS := $(DEVICE_PATH)/sepolicy
 BOARD_SEPOLICY_DIRS := \
     $(DEVICE_PATH)/sepolicy/basic \
     $(DEVICE_PATH)/sepolicy/bsp \

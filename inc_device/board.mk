@@ -23,6 +23,7 @@ BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
 
 # Audio
 BOARD_USES_MTK_AUDIO := true
+USE_XML_AUDIO_POLICY_CONF := 0
 
 # Audio, disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
