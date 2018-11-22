@@ -15,10 +15,5 @@
 #
 
 # Symbols
-PRODUCT_PACKAGES += libshim_cam
-PRODUCT_PACKAGES += libshim_gui
-PRODUCT_PACKAGES += libshim_ifc
-PRODUCT_PACKAGES += libshim_pbb
-PRODUCT_PACKAGES += libshim_ui
-#PRODUCT_PACKAGES += libshim_vtmal
-#PRODUCT_PACKAGES += libshim_wvm
+PRODUCT_PACKAGES += \
+    libshim_cam

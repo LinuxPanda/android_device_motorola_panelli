@@ -40,16 +40,6 @@ include $(DEVICE_PATH)/inc_board/kernel.mk
 # Partition
 include $(DEVICE_PATH)/inc_board/partitions.mk
 
-# Linker symbols
-LIBSHIM_CAM_SYMBOLS := true
-LIBSHIM_GUI_SYMBOLS := true
-LIBSHIM_IFC_SYMBOLS := true
-LIBSHIM_PBB_SYMBOLS := true
-LIBSHIM_UI_SYMBOLS := true
-#LIBSHIM_VTMAL_SYMBOLS := true
-#LIBSHIM_WVM_SYMBOLS :=true
-include $(DEVICE_PATH)/inc_board/symbols_linker.mk
-
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/twrp.fstab
@@ -62,6 +52,10 @@ BOARD_SEPOLICY_DIRS := \
     $(DEVICE_PATH)/sepolicy/basic \
     $(DEVICE_PATH)/sepolicy/bsp \
     $(DEVICE_PATH)/sepolicy/full
+
+# Shims
+LINKER_FORCED_SHIM_LIBS := \
+    /system/vendor/lib/libcam.camadapter.so|libshim_cam.so
 
 # System Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
