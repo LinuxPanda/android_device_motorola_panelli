@@ -21,7 +21,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_RELEASE_NAME := panelli
 
 # Device properties
-PRODUCT_NAME := lineage_panelli
+PRODUCT_NAME := pa_panelli
 PRODUCT_DEVICE := panelli
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := Moto C Plus
