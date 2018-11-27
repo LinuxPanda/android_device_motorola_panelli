@@ -108,12 +108,6 @@ PRODUCT_PACKAGES += \
     libepos \
     gps.mt6737m
 
-# Memory Heap
-PRODUCT_PACKAGES += \
-    libgralloc_extra \
-    libgui_ext \
-    libui_ext
-
 # Power
 PRODUCT_PACKAGES += \
     power.mt6737m
