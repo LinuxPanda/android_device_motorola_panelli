@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# MTK H/W Hooks
-MTK_HARDWARE := true
-BOARD_USES_MTK_HARDWARE := true
-
 # CM H/W Hooks
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
@@ -28,9 +24,6 @@ USE_XML_AUDIO_POLICY_CONF := 0
 
 # Audio, disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
-
-# Battery
-MTK_BATTERY_VOLTAGE := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -85,6 +78,3 @@ WIFI_DRIVER_FW_PATH_PARAM := /dev/wmtWifi
 WIFI_DRIVER_FW_PATH_AP := AP
 WIFI_DRIVER_FW_PATH_STA := STA
 WIFI_DRIVER_FW_PATH_P2P := P2P
-WIFI_DRIVER_STATE_CTRL_PARAM := /dev/wmtWifi
-WIFI_DRIVER_STATE_ON := 1
-WIFI_DRIVER_STATE_OFF := 0
