@@ -118,15 +118,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.mt6737m
 
-# RIL
-PRODUCT_PACKAGES += \
-    libccci_util
-
 # Thermal
 PRODUCT_PACKAGES += \
     thermal.mt6737m
 
 # WiFi
 PRODUCT_PACKAGES += \
-    lib_driver_cmd_mt66xx \
-    libwifi-hal-mt66xx
+    lib_driver_cmd_mt66xx
