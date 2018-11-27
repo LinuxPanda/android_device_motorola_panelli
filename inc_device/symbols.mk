@@ -17,4 +17,5 @@
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_cam \
+    libshim_ifc \
     libshim_ui

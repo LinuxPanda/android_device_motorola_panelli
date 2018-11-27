@@ -4,7 +4,7 @@ echo $1
 rootdirectory="$PWD"
 # ---------------------------------
 
-dirs="bionic external/apache-http packages/apps/FMRadio packages/apps/Settings system/core system/netd"
+dirs="bionic external/apache-http frameworks/native packages/apps/FMRadio packages/apps/Settings system/core system/netd"
 
 # red + nocolor
 RED='\033[0;31m'

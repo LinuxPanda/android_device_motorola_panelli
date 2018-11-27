@@ -55,6 +55,7 @@ BOARD_SEPOLICY_DIRS := \
 
 # Shims
 LINKER_FORCED_SHIM_LIBS := \
+    /system/lib/libnetutils.so|libshim_ifc.so \
     /system/lib/libui.so|libshim_ui.so \
     /system/vendor/lib/libcam.camadapter.so|libshim_cam.so
 

@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# MTK H/W Hooks
+BOARD_USES_MTK_HARDWARE := true
+
 # CM H/W Hooks
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
